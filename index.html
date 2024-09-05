@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulir Pemesanan</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,53 +12,60 @@
     <div class="container">
         <h2>Formulir Pemesanan</h2>
 
-        <label for="nama">Nama</label>
-        <input type="text" id="nama" name="nama" required>
+        <!-- Form Start -->
+        <form id="form-pemesanan">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" required>
 
-        <label for="nomor_hp">Nomor HP:</label>
-        <input type="text" id="nomor_hp" name="nomor_hp" required>
+            <label for="nomor_hp">Nomor HP:</label>
+            <input type="text" id="nomor_hp" name="nomor_hp" required>
 
-        <label>Paket Merchandise:</label>
-        <div>
-            <input type="radio" id="paket1" name="paket" value="paket1" required>
-            <label for="paket1">Paket 1</label>
-        </div>
-        <div>
-            <input type="radio" id="paket2" name="paket" value="paket2" required>
-            <label for="paket1">Paket 2</label>
-        </div>
-        <div>
-            <input type="radio" id="paket3" name="paket" value="paket3" required>
-            <label for="paket1">Paket 3</label>
-        </div>
-        <div>
-            <input type="radio" id="paket4" name="paket" value="paket4" required>
-            <label for="paket1">Paket 4</label>
-        </div>
+            <label>Paket Merchandise:</label>
+            <div>
+                <input type="radio" id="paket1" name="paket" value="paket1" required>
+                <label for="paket1">Paket 1</label>
+            </div>
+            <div>
+                <input type="radio" id="paket2" name="paket" value="paket2">
+                <label for="paket2">Paket 2</label>
+            </div>
+            <div>
+                <input type="radio" id="paket3" name="paket" value="paket3">
+                <label for="paket3">Paket 3</label>
+            </div>
+            <div>
+                <input type="radio" id="paket4" name="paket" value="paket4">
+                <label for="paket4">Paket 4</label>
+            </div>
 
-        <label>Ukuran Baju:</label>
-        <div>
-            <input type="radio" id="ukuran_s" name="ukuran" value="S" required>
-            <label for="ukuran_s">S</label>
-        </div>
-        <div>
-            <input type="radio" id="ukuran_m" name="ukuran" value="M">
-            <label for="ukuran_m">M</label>
-        </div>
-        <div>
-            <input type="radio" id="ukuran_l" name="ukuran" value="L">
-            <label for="ukuran_l">L</label>
-        </div>
-        <div>
-            <input type="radio" id="ukuran_xl" name="ukuran" value="XL">
-            <label for="ukuran_xl">XL</label>
-        </div>
+            <label>Ukuran Baju:</label>
+            <div>
+                <input type="radio" id="ukuran_s" name="ukuran" value="S" required>
+                <label for="ukuran_s">S</label>
+            </div>
+            <div>
+                <input type="radio" id="ukuran_m" name="ukuran" value="M">
+                <label for="ukuran_m">M</label>
+            </div>
+            <div>
+                <input type="radio" id="ukuran_l" name="ukuran" value="L">
+                <label for="ukuran_l">L</label>
+            </div>
+            <div>
+                <input type="radio" id="ukuran_xl" name="ukuran" value="XL">
+                <label for="ukuran_xl">XL</label>
+            </div>
 
-        <label for="bukti_transfer">Bukti Transfer:</label>
-        <input type="file" id="bukti_transfer" name="bukti_transfer" required>
+            <label for="bukti_transfer">Bukti Transfer:</label>
+            <input type="file" id="bukti_transfer" name="bukti_transfer" required>
 
-        <button type="submit" id="sendButton" disabled>Kirim</button>
+            <button type="submit" id="sendButton" disabled>Kirim</button>
+        </form>
+        <!-- Form End -->
+
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
