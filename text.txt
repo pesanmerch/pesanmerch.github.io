@@ -1,0 +1,41 @@
+<!-- <input type="radio" id="paket1" name="paket" value="paket1" required>
+                <label for="paket1">Paket 1</label> -->
+
+<!-- <div>
+                <input type="radio" id="paket2" name="paket" value="paket2">
+                <label for="paket2">Paket 2</label>
+            </div>
+            <div>
+                <input type="radio" id="paket3" name="paket" value="paket3">
+                <label for="paket3">Paket 3</label>
+            </div>
+            <div>
+                <input type="radio" id="paket4" name="paket" value="paket4">
+                <label for="paket4">Paket 4</label>
+            </div> -->
+
+<label>
+                        <input type="radio" name="paket" value="paket1" required>
+                        Paket 1
+                        <a href="#lightbox1"><img src="pre order-02.png" alt="Paket 1"></a>
+
+                        <div id="lightbox-link" class="lightbox">
+                            <span class="close">&times;</span>
+                            <img src="pre order-02.png" alt="" class="lightbox-content">
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="paket" value="paket2" required>
+                        Paket 2
+                        <img src="pre order-03.png" alt="Paket 2">
+                    </label>
+                    <label>
+                        <input type="radio" name="paket" value="paket3" required>
+                        Paket 3
+                        <img src="pre order-04.png" alt="Paket 3">
+                    </label>
+                    <label>
+                        <input type="radio" name="paket" value="paket4" required>
+                        Paket 4
+                        <img src="pre order-05.png" alt="Paket 4">
+                    </label>
