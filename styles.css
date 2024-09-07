@@ -67,8 +67,8 @@ input[type="text"], input[type="checkbox"], input[type="file"] {
 }
 
 .radio-container img {
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     object-fit: cover;
 }
 
@@ -224,7 +224,7 @@ button:disabled {
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .radio-container {
         justify-content: space-between;
     }
