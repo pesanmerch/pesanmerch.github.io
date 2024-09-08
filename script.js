@@ -44,6 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function resetTotalPrice() {
+    const totalPriceElement = document.getElementById('total-price');
+    if (totalPriceElement) {
+      totalPriceElement.textContent = 'Total Harga: Rp0'
+    }
+  }
+
   const radioButtons = document.querySelectorAll('input[type="radio"]');
   radioButtons.forEach(radio => {
     radio.addEventListener('change', updateTotalPrice);
@@ -112,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             form.reset();
             sendButton.disabled = true;
+            resetTotalPrice();
           })
           .catch((error) => {
             loadingIndicator.style.display = "none";
@@ -162,5 +170,6 @@ function closePopup(popupId) {
   if (popup) {
     popup.style.display = "none";
   }
+  resetTotalPrice();
 }
 
