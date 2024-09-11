@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (selectedPaket) {
       switch (selectedPaket.value) {
-        case 'paket1': totalPrice += 110000; break;
-        case 'paket2': totalPrice += 130000; break;
-        case 'paket3': totalPrice += 150000; break;
-        case 'paket4': totalPrice += 170000; break;
+        case 'paket1': totalPrice += 110000; break; //! T-shirt
+        case 'paket2': totalPrice += 130000; break; //! T-shirt + gantungan kunci
+        case 'paket3': totalPrice += 145000; break; //! T-shirt + lanyard
+        case 'paket4': totalPrice += 165000; break; //! T-shirt + gantungan kunci + lanyard
       }
     }
 
