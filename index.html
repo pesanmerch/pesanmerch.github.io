@@ -1,47 +1,144 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sedang dalam Perbaikan</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        img {
-            height: 500px;
-            width: auto;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 600px) {
-            img {
-                height: 200px;
-                width: auto;
-            }
-        }
-    </style>
+    <title>Formulir Pemesanan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Maaf, sedang ada sedikit perbaikan🙏</h1>
-    <img src="sorry.jpeg" alt="Maintenance Image">
+    <div class="container">
+        <h2>Formulir Pemesanan</h2>
+
+        <!-- Form Start -->
+        <form id="form-pemesanan">
+            <div class="form-section">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+
+            <div class="form-section">
+                <label for="nomor_hp">Nomor HP:</label>
+                <input type="text" id="nomor_hp" name="nomor_hp" required>
+            </div>
+
+            <div class="form-section">
+                <label>Paket Merchandise:</label>
+                <div class="radio-container">
+
+                    <label>
+                        <input type="radio" name="paket" value="paket1" required>
+                        Paket 1
+                        <a href="#lightbox1" class="lightbox-link">
+                            <img src="pre order24-02.jpg" alt="Paket 1">
+                        </a>
+
+                        <div id="lightbox1" class="lightbox">
+                            <span class="close">&times;</span>
+                            <img src="pre order24-02.jpg" alt="Paket 1" class="lightbox-content">
+                        </div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="paket" value="paket2" required>
+                        Paket 2
+                        <a href="#lightbox2" class="lightbox-link">
+                            <img src="pre order24-03.jpg" alt="Paket 2">
+                        </a>
+
+                        <div id="lightbox2" class="lightbox">
+                            <span class="close">&times;</span>
+                            <img src="pre order24-03.jpg" alt="Paket 2" class="lightbox-content">
+                        </div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="paket" value="paket3" required>
+                        Paket 3
+                        <a href="#lightbox3" class="lightbox-link">
+                            <img src="pre order24-04.jpg" alt="Paket 3">
+                        </a>
+
+                        <div id="lightbox3" class="lightbox">
+                            <span class="close">&times;</span>
+                            <img src="pre order24-04.jpg" alt="Paket 3" class="lightbox-content">
+                        </div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="paket" value="paket4" required>
+                        Paket 4
+                        <a href="#lightbox4" class="lightbox-link">
+                            <img src="pre order24-05.jpg" alt="Paket 4">
+                        </a>
+
+                        <div id="lightbox4" class="lightbox">
+                            <span class="close">&times;</span>
+                            <img src="pre order24-05.jpg" alt="Paket 4" class="lightbox-content">
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="form-section">
+                <label>Ukuran Baju:</label>
+                <div class="radio-container">
+                    <label><input type="radio" id="ukuran_s" name="ukuran" value="S" required> S</label>
+                    <label><input type="radio" id="ukuran_m" name="ukuran" value="M"> M</label>
+                    <label><input type="radio" id="ukuran_l" name="ukuran" value="L"> L</label>
+                    <label><input type="radio" id="ukuran_xl" name="ukuran" value="XL"> XL</label>
+                    <label><input type="radio" id="ukuran_xxl" name="ukuran" value="XXL"> XXL</label>
+                    <label><input type="radio" id="ukuran_xxxl" name="ukuran" value="XXXL"> XXXL</label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label>Lengan Baju:</label>
+                <div class="radio-container">
+                    <label><input type="radio" id="pendek" name="lengan" value="pendek" required> Pendek</label>
+                    <label><input type="radio" id="panjang" name="lengan" value="panjang" required> Panjang</label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div id="total-price">Total Harga: Rp0</div>
+            </div>
+
+            <div class="form-section">
+                <label for="bukti_transfer">Bukti Transfer:</label>
+                <p>Transfer ke 083844263332 (DANA/OVO) a.n Siti Magfira</p>
+                <input type="file" id="bukti_transfer" name="bukti_transfer" required>
+            </div>
+
+            <button type="submit" id="sendButton" disabled>Kirim</button>
+        </form>
+        <!-- Form End -->
+
+        <div id="loading-indicator">
+            <div class="spinner"></div>
+        </div>
+
+        <div id="success-popup" class="popup">
+            <img src="success.png" alt="Success">
+            <p>Data berhasil dikirim!</p>
+            <button onclick="closePopup('success-popup')">Tutup</button>
+        </div>
+
+        <div id="error-popup" class="popup">
+            <img src="error.png" alt="Error">
+            <p>Terjadi kesalahan. Silahkan coba lagi</p>
+            <button onclick="closePopup('error-popup')">Tutup</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
